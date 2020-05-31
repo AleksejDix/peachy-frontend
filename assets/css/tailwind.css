@@ -2,4 +2,27 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 /* purgecss end ignore */
+
 @import 'tailwindcss/utilities';
+
+.button {
+  @apply flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 transition duration-150 ease-in-out;
+}
+
+.button:focus {
+  @apply outline-none shadow-outline-indigo border-indigo-700;
+}
+
+.button:hover {
+  @apply bg-indigo-500;
+}
+
+.button:active {
+  @apply bg-indigo-700;
+}
+
+
+
+.link {
+  @apply underline text-indigo-600;
+}

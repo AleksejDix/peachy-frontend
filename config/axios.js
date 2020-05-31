@@ -1,3 +1,3 @@
 export default {
-  baseURL: process.env.BASE_URL || 'http://localhost:1337/'
+  baseURL: process.env.BASE_URL || 'http://localhost:1337'
 }

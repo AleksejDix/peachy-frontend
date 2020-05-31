@@ -1,6 +1,6 @@
 <template>
   <div class="pb-8 logo border">
-    <h1 class=" font-display text-6xl leading-none">
+    <h1 class="font-display text-6xl leading-none">
       Peachy<span class="inline-block -ml-2">.</span>
     </h1>
     <p
