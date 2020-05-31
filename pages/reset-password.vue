@@ -57,5 +57,3 @@ export default {
   }
 }
 </script>
-
-/auth/email-confirmation?confirmation=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcsImlhdCI6MTU5MDg3MTAyOSwiZXhwIjoxNTkzNDYzMDI5fQ.zu2uxfawwWPKWNllsyE-UsxbgafGXs6qR98uZZUxLJw
