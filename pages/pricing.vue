@@ -271,7 +271,7 @@ export default {
     },
     async createPaymentMethod() {
       try {
-        const paymentMethod = await this.stripe.createPaymentMethod({
+        const { paymentMethod } = await this.stripe.createPaymentMethod({
           type: 'card',
           card: this.cardElement
         })
