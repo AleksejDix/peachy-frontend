@@ -29,7 +29,8 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@tailwindcss/ui": "^0.3.0",
-    "nuxt": "^2.12.2"
+    "nuxt": "^2.12.2",
+    "vue-stripe-checkout": "^3.3.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",

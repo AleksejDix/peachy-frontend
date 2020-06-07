@@ -9,7 +9,7 @@
       <div>
         <label
           for="email"
-          class="block text-sm font-medium leading-5 text-gray-700"
+          class="block text-sm font-medium leading-5 text-gray-300"
           >E-Mail:</label
         >
         <div class="mt-1 relative rounded-md shadow-sm">
@@ -19,14 +19,14 @@
             type="email"
             name="email"
             autocomplete="email"
-            class="form-input block w-full sm:text-sm sm:leading-5"
+            class="form-input block w-full sm:text-sm sm:leading-5 bg-gray-800"
           />
         </div>
       </div>
       <div>
         <label
           for="password"
-          class="block text-sm font-medium leading-5 text-gray-700"
+          class="block text-sm font-medium leading-5 text-gray-300"
           >Password:</label
         >
         <div class="mt-1 relative rounded-md shadow-sm">
@@ -35,7 +35,7 @@
             v-model="form.password"
             type="password"
             name="password"
-            class="form-input block w-full sm:text-sm sm:leading-5"
+            class="form-input block w-full sm:text-sm sm:leading-5 bg-gray-800"
           />
         </div>
       </div>

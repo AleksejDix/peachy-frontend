@@ -9,7 +9,7 @@
       <div>
         <label
           for="username"
-          class="block text-sm font-medium leading-5 text-gray-700"
+          class="block text-sm font-medium leading-5 text-gray-300"
           >Username</label
         >
         <input
@@ -17,13 +17,13 @@
           v-model="form.username"
           type="text"
           name="name"
-          class="form-input block w-full sm:text-sm sm:leading-5"
+          class="form-input block w-full sm:text-sm sm:leading-5 bg-gray-800"
         />
       </div>
       <div>
         <label
           for="email"
-          class="block text-sm font-medium leading-5 text-gray-700"
+          class="block text-sm font-medium leading-5 text-gray-300"
           >E-Mail:</label
         >
         <input
@@ -31,13 +31,13 @@
           v-model="form.email"
           type="email"
           name="email"
-          class="form-input block w-full sm:text-sm sm:leading-5"
+          class="form-input block w-full sm:text-sm sm:leading-5 bg-gray-800"
         />
       </div>
       <div>
         <label
           for="password"
-          class="block text-sm font-medium leading-5 text-gray-700"
+          class="block text-sm font-medium leading-5 text-gray-300"
           >Password:</label
         >
         <input
@@ -45,7 +45,7 @@
           v-model="form.password"
           type="password"
           name="password"
-          class="form-input block w-full sm:text-sm sm:leading-5"
+          class="form-input block w-full sm:text-sm sm:leading-5 bg-gray-800"
           autocomplete="new-passwor"
         />
       </div>

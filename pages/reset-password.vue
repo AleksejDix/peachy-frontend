@@ -15,7 +15,7 @@
           class="hidden h-0 w-0"
         />
         <label
-          class="block text-sm font-medium leading-5 text-gray-700"
+          class="block text-sm font-medium leading-5 text-gray-300"
           for="passowrd"
           >Password</label
         >
@@ -28,13 +28,13 @@
             :class="{
               'bg-green-100 border-green-500': same && filled
             }"
-            class="form-input block w-full sm:text-sm sm:leading-5"
+            class="form-input block w-full sm:text-sm sm:leading-5 bg-gray-800"
           />
         </div>
       </div>
       <div>
         <label
-          class="block text-sm font-medium leading-5 text-gray-700"
+          class="block text-sm font-medium leading-5 text-gray-300"
           for="passwordConfirmation"
           >Confirm Password</label
         >
@@ -47,7 +47,7 @@
             :class="{
               'bg-green-100 border-green-500': same && filled
             }"
-            class="form-input block w-full sm:text-sm sm:leading-5"
+            class="form-input block w-full sm:text-sm sm:leading-5 bg-gray-800"
           />
         </div>
       </div>

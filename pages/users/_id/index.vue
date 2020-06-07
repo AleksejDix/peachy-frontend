@@ -1,8 +1,7 @@
 <template>
-  <div>
+  <div v-if="$auth.loggedIn">
     <h1 class="font-dispaly text-4xl">{{ profile.username }}</h1>
     <nuxt-link
-      v-if="$auth.loggedIn"
       class="bg-red"
       :to="{
         name: 'profile-edit',
@@ -20,11 +19,9 @@
 export default {
   async fetch() {
     try {
-      const response = await this.$axios.get(
-        `/users?slug=${this.$route.params.profile}`
-      )
+      const response = await this.$axios.get(`/users/me`)
       if (response.status === 200) {
-        this.profile = response.data[0]
+        this.profile = response.data
       }
       return response
     } catch (error) {

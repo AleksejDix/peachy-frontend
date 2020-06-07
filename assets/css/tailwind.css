@@ -5,6 +5,32 @@
 
 @import 'tailwindcss/utilities';
 
+html,
+body {
+  @apply fixed w-full overflow-hidden bg-gray-900;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  user-select: none;
+  text-size-adjust: none;
+}
+
+body,
+#__nuxt,
+#__layout,
+#root {
+  height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    touch-action: pan-x pan-y;
+}
+
 .button {
   @apply flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 transition duration-150 ease-in-out;
 }
