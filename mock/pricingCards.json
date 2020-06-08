@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Member",
+    "popular": true,
+    "price": {
+      "month": {
+        "type": "month",
+        "price": 7
+      },
+      "year": {
+        "type": "year",
+        "price": 77
+      }
+    },
+    "tags": [
+      "Discounted price for web zurich workshops",
+      "Free Drinks and Snacks at events",
+      "Rewatch recorded videos",
+      "Support the local community",
+      " You can leave a Testimonial on the website"
+    ]
+  },
+  {
+    "title": "Sponsor",
+    "popular": false,
+    "price": {
+      "month": {
+        "type": "month",
+        "price": 100
+      },
+      "year": {
+        "type": "year",
+        "price": 1200
+      }
+    },
+    "tags": [
+      "Discounted price for web zurich workshops",
+      "Free Drinks and Snacks at events",
+      "Rewatch recorded videos",
+      "Support the local community",
+      " You can leave a Testimonial on the website",
+      "Your logo will be on the website"
+    ]
+  }
+]
