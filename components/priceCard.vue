@@ -42,7 +42,7 @@
             </span>
           </div>
           <div
-            class="relative mx-auto w-10 mt-6 select-none transition duration-200 ease-in"
+            class="relative mx-auto w-10 mt-2 select-none transition duration-200 ease-in"
           >
             <input
               v-model="checkbox"
