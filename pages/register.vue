@@ -99,13 +99,13 @@ export default {
           email,
           password
         })
-        // console.log(response)
+
         if (response.status === 200) {
           this.$auth.setUserToken(response.data.jwt)
           this.$auth.setUser(response.data.user)
         }
       } catch (error) {
-        this.error = error.response.data.data[0]
+        this.error = error.response.data.data
       }
     }
   }

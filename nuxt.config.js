@@ -44,6 +44,7 @@ export default {
    */
   plugins: [
     '~/plugins/global-components.js',
+    '~/plugins/global-events.js',
     '~/plugins/notifications.js',
   ],
   /*

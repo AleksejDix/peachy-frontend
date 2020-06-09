@@ -90,6 +90,12 @@ export default {
         const response = await this.$auth.loginWith('local', {
           data: this.form
         })
+        if (response.status === 200) {
+          this.$notifications.create({
+            message: 'Success!',
+            body: "You're now logged in"
+          })
+        }
         return response
       } catch (error) {
         this.error = error.response.data.data

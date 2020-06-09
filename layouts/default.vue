@@ -7,34 +7,41 @@
         :style="{ width: `${width}px`, maxWidth: '50vw', minWidth: '190px' }"
         class="relative h-full flex-shrink-0 border-r border-gray-700"
       >
-        <div v-if="$auth.loggedIn">
-          <pre>{{ $auth.user.username }}</pre>
-        </div>
-        <div v-if="$auth.loggedIn">
-          <strong>{{ $auth.user.email }}</strong>
-          <button class="button" @click="$auth.logout()">log out</button>
-          <nuxt-link
-            :to="{
-              name: 'users-id',
-              params: {
-                id: $auth.user.id
-              }
-            }"
-            >profile</nuxt-link
-          >
-          <nuxt-link
-            :to="{
-              name: 'users-id-orders',
-              params: {
-                id: $auth.user.id
-              }
-            }"
-            >orders</nuxt-link
-          >
-        </div>
-        <div v-else>
-          <nuxt-link to="/login">login</nuxt-link>
-          <nuxt-link to="/register">register</nuxt-link>
+        <div class="h-12 p-4 flex justify-end">
+          <div v-if="$auth.loggedIn">
+            <DropDown>
+              <template #trigger="{toggle}">
+                <strong @click="toggle">{{ $auth.user.name }}</strong>
+              </template>
+              <template #default>
+                <PeachySurface class="px-2">
+                  <button @click="logout">log out</button>
+                </PeachySurface>
+              </template>
+            </DropDown>
+          </div>
+          <div v-else>
+            <nuxt-link to="/login">login</nuxt-link>
+            <nuxt-link to="/register">register</nuxt-link>
+            <nuxt-link
+              :to="{
+                name: 'users-id',
+                params: {
+                  id: $auth.user.id
+                }
+              }"
+              >profile</nuxt-link
+            >
+            <nuxt-link
+              :to="{
+                name: 'users-id-orders',
+                params: {
+                  id: $auth.user.id
+                }
+              }"
+              >orders</nuxt-link
+            >
+          </div>
         </div>
         <div
           class="absolute cursor-move w-4 -mr-2 h-full top-0 right-0"
@@ -95,6 +102,13 @@ export default {
       if (this.isResizing) {
         this.width = e.pageX
       }
+    },
+    async logout() {
+      await this.$auth.logout()
+      this.$notifications.create({
+        message: 'Success!',
+        body: "You're now logged out"
+      })
     }
   }
 }

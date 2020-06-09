@@ -1,8 +1,5 @@
 <template>
-  <article
-    :class="classes"
-    class="shadow rounded-md px-2 pt-3 pb-2 flex space-x-2"
-  >
+  <article :class="classes" class="shadow rounded-md p-2 flex space-x-2">
     <div class="flex-1 text-sm pl-2">
       <h1 class="text-white font-bold">{{ message }}</h1>
       <p v-if="body" class="text-gray-200">{{ body }}</p>
