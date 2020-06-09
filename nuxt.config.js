@@ -44,6 +44,7 @@ export default {
    */
   plugins: [
     '~/plugins/global-components.js',
+    '~/plugins/notifications.js',
   ],
   /*
    ** Nuxt.js dev-modules

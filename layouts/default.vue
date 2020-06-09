@@ -42,12 +42,21 @@
         ></div>
       </div>
       <div class="overflow-auto flex-1 relative">
+        <button
+          @click="
+            $notifications.create({
+              type: 'error',
+              message: 'FAILED!',
+              body: 'not enough funds.'
+            })
+          "
+        >
+          hallo
+        </button>
         <nuxt />
       </div>
     </section>
-    <user-notifications>
-      <user-notification />
-    </user-notifications>
+    <user-notifications />
   </div>
 </template>
 

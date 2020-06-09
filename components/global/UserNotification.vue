@@ -1,22 +1,14 @@
 <template>
   <article
-    class="bg-gray-800 border border-gray-700 shadow rounded-md p-4 bg-gray-800 flex space-x-4"
+    :class="classes"
+    class="shadow rounded-md px-2 pt-3 pb-2 flex space-x-2"
   >
-    <div class="flex-shrink-0">
-      <svg class="w-5 h-5 text-indigo-500 fill-current" viewBox="0 0 20 20">
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-          clip-rule="evenodd"
-        ></path>
-      </svg>
-    </div>
-    <div class="flex-1 text-sm">
-      <h1 class="text-gray-100">Saved!</h1>
-      <p class="text-gray-400">User Message!</p>
+    <div class="flex-1 text-sm pl-2">
+      <h1 class="text-white font-bold">{{ message }}</h1>
+      <p v-if="body" class="text-gray-200">{{ body }}</p>
     </div>
     <div class="flex-shrink-0">
-      <button>
+      <button @click="destroy(1)">
         <svg
           class="w-5 h-5 text-white fill-current"
           fill="currentColor"
@@ -32,3 +24,58 @@
     </div>
   </article>
 </template>
+
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  props: {
+    message: {
+      type: String,
+      default: ''
+    },
+    id: {
+      type: String,
+      required: true
+    },
+    type: {
+      type: String,
+      default: 'success'
+    },
+    duration: {
+      type: Number,
+      default: 5000
+    },
+    body: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
+    classes() {
+      switch (this.type) {
+        case 'error':
+          return 'bg-red-900 border border-red-700'
+        default:
+          return 'bg-gray-800 border border-gray-600'
+      }
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.destroy(this.id)
+    }, this.duration)
+
+    if (this.type === 'success') {
+      navigator.vibrate(200)
+    } else if (this.type === 'fail') {
+      navigator.vibrate(700)
+    }
+  },
+  methods: {
+    ...mapActions({
+      destroy: 'notifications/destroy'
+    })
+  }
+}
+</script>
