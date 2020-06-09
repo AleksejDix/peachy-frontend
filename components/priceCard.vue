@@ -45,10 +45,10 @@
             class="relative mx-auto w-10 mt-2 select-none transition duration-200 ease-in"
           >
             <input
+              id="toggle"
               v-model="checkbox"
               type="checkbox"
               name="toggle"
-              id="toggle"
               class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
             />
             <label
