@@ -90,3 +90,6 @@ sw.*
 *.swp
 
 .now
+
+package-lock.json
+yarn.lock

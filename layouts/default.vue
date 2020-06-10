@@ -1,5 +1,5 @@
 <template>
-  <div id="root">
+  <div v-if="$auth.loggedIn" id="root">
     <section
       class="flex w-full h-full min-h-full text-gray-400 overflow-hidden"
     >
@@ -8,7 +8,7 @@
         class="relative h-full flex-shrink-0 border-r border-gray-700"
       >
         <div class="h-12 p-4 flex justify-end">
-          <div v-if="$auth.loggedIn">
+          <div>
             <DropDown>
               <template #trigger="{toggle}">
                 <strong @click="toggle">{{ $auth.user.name }}</strong>
@@ -20,9 +20,9 @@
               </template>
             </DropDown>
           </div>
-          <div v-else>
-            <nuxt-link to="/login">login</nuxt-link>
-            <nuxt-link to="/register">register</nuxt-link>
+        </div>
+        <div>
+          <div>
             <nuxt-link
               :to="{
                 name: 'users-id',
@@ -69,6 +69,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   data() {
     return {
       width: 200,
