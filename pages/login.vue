@@ -7,6 +7,15 @@
     </header>
     <form class="space-y-4" @submit.prevent="login">
       <div>
+        <button
+          class="button w-full"
+          type="button"
+          @click="$auth.loginWith('github')"
+        >
+          log in with github
+        </button>
+      </div>
+      <div>
         <label
           for="email"
           class="block text-sm font-medium leading-5 text-gray-300"
