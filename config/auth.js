@@ -1,4 +1,7 @@
 export default {
+  redirect: {
+    callback: '/connect/github/callback'
+  },
   localStorage: {
     prefix: 'peachy.'
   },
@@ -18,11 +21,11 @@ export default {
         logout: false
       },
       tokenRequired: true,
-      tokenType: 'bearer',
+      tokenType: 'bearer'
     },
     github: {
       client_id: process.env.GITHUB_CLIENT_ID,
       client_secret: process.env.GITHUB_CLIENT_SECRET
-    },
+    }
   }
 }
