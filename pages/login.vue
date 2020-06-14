@@ -6,7 +6,7 @@
       </h1>
     </header>
     <form class="space-y-4" @submit.prevent="login">
-      <div>
+      <!-- <div>
         <a
           :href="`https://peachy-strapi.herokuapp.com/connect/google`"
           className="link"
@@ -17,7 +17,7 @@
           className="link"
           >github</a
         >
-      </div>
+      </div> -->
       <div>
         <label
           for="email"
