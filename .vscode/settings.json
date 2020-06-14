@@ -1,5 +1,10 @@
 {
   "jumpToAliasFile.alias": {
-    "@": "/Users/aleksejdix/Projects/privat/peachy.one/src"
+    "@": "/Users/aleksejdix/Projects/privat/peachy.one/frontend/src"
+  },
+  "editor.formatOnSave": true,
+  "vetur.validation.template": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }
