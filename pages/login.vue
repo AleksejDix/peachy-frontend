@@ -7,8 +7,15 @@
     </header>
     <form class="space-y-4" @submit.prevent="login">
       <div>
-        <a :href="`http://localhost:1337/connect/google`" className="link"
+        <a
+          :href="`https://peachy-strapi.herokuapp.com/connect/google`"
+          className="link"
           >google</a
+        >
+        <a
+          :href="`https://peachy-strapi.herokuapp.com/connect/github`"
+          className="link"
+          >github</a
         >
       </div>
       <div>
