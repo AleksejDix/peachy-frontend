@@ -1,26 +1,11 @@
 <template>
   <div v-if="$auth.loggedIn" id="root">
-    <section
-      class="flex w-full h-full min-h-full text-gray-400 overflow-hidden"
-    >
+    <section class="flex w-full h-full min-h-full overflow-hidden">
       <div
         :style="{ width: `${width}px`, maxWidth: '50vw', minWidth: '190px' }"
         class="relative h-full flex-shrink-0 border-r border-gray-700"
       >
-        <div class="h-12 p-4 flex justify-end">
-          <div>
-            <DropDown>
-              <template #trigger="{toggle}">
-                <strong @click="toggle">{{ $auth.user.name }}</strong>
-              </template>
-              <template #default>
-                <PeachySurface class="px-2">
-                  <button @click="logout">log out</button>
-                </PeachySurface>
-              </template>
-            </DropDown>
-          </div>
-        </div>
+        <div class="h-12 p-4 flex justify-end"></div>
         <div>
           <div>
             <nuxt-link
@@ -48,18 +33,23 @@
           @mousedown="startResize"
         ></div>
       </div>
-      <div class="overflow-auto flex-1 relative">
-        <button
-          @click="
-            $notifications.create({
-              type: 'error',
-              message: 'FAILED!',
-              body: 'not enough funds.'
-            })
-          "
-        >
-          hallo
-        </button>
+      <div class="overflow-auto flex-1 relative ">
+        <div>
+          {{ $auth.strategy.name }}
+          {{ $auth.getToken('google') }}
+
+          <button @click="logout">log out</button>
+          <DropDown>
+            <template #trigger="{toggle}">
+              <strong @click="toggle">{{ $auth.user.name }}</strong>
+            </template>
+            <template #default>
+              <PeachySurface class="px-2">
+                <button @click="logout">log out</button>
+              </PeachySurface>
+            </template>
+          </DropDown>
+        </div>
         <nuxt />
       </div>
     </section>

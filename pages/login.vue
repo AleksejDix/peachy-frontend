@@ -7,13 +7,9 @@
     </header>
     <form class="space-y-4" @submit.prevent="login">
       <div>
-        <button
-          class="button w-full"
-          type="button"
-          @click="$auth.loginWith('github')"
+        <a :href="`http://localhost:1337/connect/google`" className="link"
+          >google</a
         >
-          log in with github
-        </button>
       </div>
       <div>
         <label
@@ -107,7 +103,10 @@ export default {
         }
         return response
       } catch (error) {
+        console.log(error.status)
+        if (!error.response) return error
         this.error = error.response.data.data
+
         return error
       }
     }
