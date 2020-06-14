@@ -15,13 +15,7 @@ module.exports = {
       'nuxt.config.js'
     ]
   },
-  theme: {
-    extend: {
-      fontFamily: {
-        display: ['Playfair Display']
-      }
-    }
-  },
+  theme: {},
   variants: {},
   plugins: [require('@tailwindcss/ui')]
 }

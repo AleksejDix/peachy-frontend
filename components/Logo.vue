@@ -1,14 +1,5 @@
 <template>
-  <div class="pb-8 logo">
-    <h1 class="text-orange-500 font-display text-6xl leading-none">
-      Peachy<span class="inline-block -ml-2">.</span>
-    </h1>
-    <p
-      class="-mt-1 ml-1 uppercase tracking-wide text-xs font-semibold relative"
-    >
-      just screencasts
-    </p>
-  </div>
+  <div class="logo w-12 h-12 bg-orange-500 rounded-full"></div>
 </template>
 <style>
 .logo {
